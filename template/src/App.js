@@ -3,6 +3,7 @@ import './App.css';
 
 import A01ClassComp from './components/A01ClassComp'
 import A02FuncComp from './components/A02FuncComp'
+import A04Library from './components/A04Library'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
       <A01ClassComp />
       <A02FuncComp />
+      <A04Library />
     </div>
   );
 }

@@ -2,8 +2,8 @@
 // ES6
 (function(){
 
-    console.log([10, 11, 100]);
-    console.log('NolBu');
+    console.log(...[10, 11, 100]);
+    console.log(...'NolBu');
     console.log('');
 
 
@@ -15,7 +15,7 @@
         console.log(`e => ${e}`);
         console.log(`rest => ${rest} / ${rest.length}`);
     }
-    spreadFun(0, [10, 20, 30], 40, [50, 60, 70]);
+    spreadFun(0, ...[10, 20, 30], 40, ...[50, 60, 70]);
     console.log('')
 
 
@@ -26,12 +26,12 @@
     let value = new Set([1, 2, 2, 3]);
     console.log(value);
 
-    fun(new Set([1, 2, 2, 3]));
+    fun(...new Set([1, 2, 2, 3]));
     console.log('');
 
 
     let aryOne = [10, 20, 30];
-    var aryTwo = [1, 2, 3, aryOne];
+    var aryTwo = [1, 2, 3, ...aryOne];
     console.log(aryTwo);
     console.log('');
 
@@ -45,7 +45,7 @@
     let objTwo = {
         id: 10,
         address: 'Seoul',
-        objOne
+        ...objOne
     }
     console.log(objTwo);
 

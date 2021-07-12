@@ -15,6 +15,9 @@
 
 
     // Arrow 함수 이용.
-    
+    let onAddOne = ary.map( x => x + 1 )
+    console.log(onAddOne)
+
+    // let onMinOne = ary.map((x, index) => { index:index, value: x + 1 })
 
 })();

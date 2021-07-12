@@ -12,7 +12,12 @@
 
     
     // Object
+    // let name = obj.name
+    // let age = obj.age
+    // console.log(name, age)
 
+    let { name: nickname, age } = obj
+    console.log(nickname, age)
 
     // Array
 

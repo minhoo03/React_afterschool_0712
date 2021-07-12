@@ -1,0 +1,4 @@
+npm i -g create-react-app
+create-react-app 프로젝트 명
+package.json
+    dependencies -> 프로젝트 실행, 빌드를 위한 라이브러리 목록

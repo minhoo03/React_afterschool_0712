@@ -9,4 +9,5 @@ function longNameFunction() {
     return 'longNameFunction';
 }
 
-
+export default onAdd
+// export num, longNameFunction

@@ -16,6 +16,11 @@
 
 
     // ES6. Arrow 함수.
-    
+    let onMulti = (x, y) => {
+        let result = x + y
+        console.log(result)
+    }
+
+    onMulti(10, 20)
 
 })();

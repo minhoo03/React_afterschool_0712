@@ -1,6 +1,6 @@
 
-
-function onMulti(x, y) {
+// 모듈형태
+export function onMulti(x, y) {
     return x * y;
 }
 

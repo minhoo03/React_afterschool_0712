@@ -65,7 +65,7 @@ const A07Hook = () => {
             <h3>A07. useReducer</h3>
 
             <div>
-                Name: {data.name}
+                Name: {data.name} / {memoAvg}
                     <input type="text" name="name" className="form-control"
                     value={data.name} onChange={changeString} /><br />
 

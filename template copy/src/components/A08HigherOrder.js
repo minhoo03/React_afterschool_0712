@@ -5,7 +5,7 @@ function A08HigherOrder(props) {
     return (
         <div>
             <h3>A08 Higher Order Component</h3>
-            props: 
+            
         </div>
     )
 }

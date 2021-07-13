@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function A03FuncEvent() {
 
@@ -13,6 +13,18 @@ function A03FuncEvent() {
         baseball: 'NC',
         four: []
     })
+
+    // useRef() Hook
+    const nameRef = useRef()
+    const ageRef = useRef()
+
+    useEffect(() => {
+        console.log(nameRef)
+        nameRef.current.style.border = '1px solid orange'
+        nameRef.current.focus()
+
+        ageRef.current.color = 'orange'
+    }, [])
 
     // Event
     // const changeName = (evt) => {
@@ -64,10 +76,10 @@ function A03FuncEvent() {
             <form>
                 Name: {data.name}
                     <input type="text" name="name" className="form-control" 
-                        defaultValue={name} onChange={changeValue} /> <br />
+                        defaultValue={name} onChange={changeValue} ref={nameRef} /> <br />
                 Age: {data.age}
                     <input type="text" name="age" className="form-control"
-                    value={data.age} onChange={changeValue} /> <br />
+                    value={data.age} onChange={changeValue} ref={ageRef} /> <br />
                 Date: {data.date}
                     <input type="date" name="date" className="form-control" 
                     value={data.date} onChange={changeValue} /> <br />

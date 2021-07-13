@@ -6,14 +6,15 @@ import A03FuncEvent from './components/A03FuncEvent'
 import A06Hook from './components/A06Hook'
 import A07Hook from './components/A07Hook'
 import A08HigherOrder from './components/A08HigherOrder'
+import A09Currency from './components/A09Currency'
 
 function App() {
 
   return (
     <div className="App">
       {/* <A01FuncProps name="김민후" age="19" /> */}
-      <A08HigherOrder />
-      <A07Hook />
+      <A09Currency />
+      {/* <A07Hook /> */}
     </div>
   );
 }

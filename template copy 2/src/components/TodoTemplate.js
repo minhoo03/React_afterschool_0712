@@ -25,18 +25,23 @@ const TodoTemplate = () => {
     const cnt = useRef(4);
 
     const [todoList, setTodoList] = useState(makeTodo());
+
+    // * 아래 todo 함수 3개의 의존관계 삭제 (const todos를 찾는 시간 최적화)
     const updateTodo = useCallback( (id) => {
-        const todos = todoList.map( item => item.id === id ? {...item, done: !item.done} : item );
-        setTodoList(todos);
-    }, [todoList]);
+        // const todos = todoList.map( item => item.id === id ? {...item, done: !item.done} : item );
+        // setTodoList((todoList) => todos);
+        setTodoList((todoList) => todoList.map( item => item.id === id ? {...item, done: !item.done} : item ))
+    }, []);
     const deleteTodo = useCallback( (id) => {
-        const todos = todoList.filter( item => item.id !== id );
-        setTodoList(todos);
-    }, [todoList]);
+        // const todos = todoList.filter( item => item.id !== id );
+        // setTodoList(todos);
+        setTodoList((todoList) => todoList.filter( item => item.id !== id ));
+    }, []);
     const addTodo = useCallback( (text) => {
         const todo = {id: cnt.current++, text: text, done: false};
-        setTodoList(todoList.concat(todo));
-    }, [todoList, cnt])
+        // setTodoList(todoList.concat(todo));
+        setTodoList((todoList) => todoList.concat(todo));
+    }, [])
     
 
     return (

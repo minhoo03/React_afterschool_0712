@@ -20,4 +20,5 @@ function TodoListItem(props) {
     )
 }
 
-export default TodoListItem
+// React.memo: 컴포넌트의 props 가 바뀌지 않았다면, 리렌더링을 방지 (최적화)
+export default React.memo(TodoListItem)

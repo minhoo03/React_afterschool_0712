@@ -26,6 +26,9 @@ const A05ChildComponent = () => {
             )} />
 
             <Route path="/A07Child/two/:id"        render={ ({match}) => (
+
+                // const {match} = props
+
                 <div>
                     <h6>TWO Component</h6>
                     <div>This is two Component</div>

@@ -1,5 +1,8 @@
 
 import React from 'react';
+import { useLocation } from 'react-router';
+import qs from 'query-string'
+import { produceWithPatches } from 'immer';
 
 const A04ArgsComponent = () => {
 
@@ -12,6 +15,11 @@ const A04ArgsComponent = () => {
         { "id": 6, "name": "Trout", "category": "Fish", "price": 12.93, "expiry": 4 }
     ];
 
+    const location = useLocation()
+    const query = qs.parse(location.search)
+
+    const product = data[query.no -1]
+
     return (
         <div>
             <h5>Argument Component</h5>
@@ -19,16 +27,22 @@ const A04ArgsComponent = () => {
             <br />
 
             <div>
-                pathname: <br/>
-                search: <br/>
-                hash: 
+                Product ID: {product.id} <br />
+                Product Name: {product.name} <br/>
             </div>
             <br />
 
             <div>
-                Name: <br/>
-                Age: <br/>
-                Address: 
+                pathname: {location.pathname} <br/>
+                search: {location.search} <br/>
+                hash: {location.hash} 
+            </div>
+            <br />
+
+            <div>
+                Name: {query.name} <br/>
+                Age: {query.age} <br/>
+                Address: {query.address}
             </div>
             <br />
 
